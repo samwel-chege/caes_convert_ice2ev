@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.29",
     "@reduxjs/toolkit": "^1.8.1",
     "next": "12.1.4",
     "react": "18.0.0",
