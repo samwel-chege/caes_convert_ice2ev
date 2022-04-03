@@ -10,7 +10,7 @@ const ResetButton = () => {
         dispatch(reset())
     }
   return (
-     <button onClick={handleClick} className="w-48 h-12 rounded-lg mt-4 bg-blue-500">Reset</button>
+     <button onClick={handleClick} className="w-48 h-12 rounded-lg mt-4 bg-blue-500">End</button>
   )
 }
 
