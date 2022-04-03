@@ -6,8 +6,9 @@ import DistanceCovered from "./components/DistanceCovered";
 import SideBar from "./components/SideBar";
 import EnergyDetails from "./energydetails";
 import Button from "./components/Button";
+import EndButton from "./components/EndButton";
+import ResetButton from "./components/ResetButton"
 import { useAppSelector, useAppDispatch } from "../app/hooks";
-import { decrement } from "../features/distance/distanceSlice";
 
 export default function Home() {
   const dispatch = useAppDispatch();
@@ -23,11 +24,13 @@ export default function Home() {
     <>
       <div className="flex gap-2">
         <SideBar />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <BatteryPercentage />
           <DistanceAvailable />
           <DistanceCovered />
-          <Button color="green" />
+          <Button />
+          <EndButton />
+          <ResetButton />
         </div>
       </div>
     </>

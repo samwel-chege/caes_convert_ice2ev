@@ -5,7 +5,7 @@ const SideBar = () => {
   const router = useRouter();
   return (
     <>
-      <div className="hover:md:w-1/6 bg-gray-200 rounded h-screen">
+      <div className="hover:md:w-1/6 bg-blue-200 rounded h-screen">
         <div className="p-2 w-32 h-32 rounded-full">
           <Image
             src="/caes.png"
@@ -16,7 +16,7 @@ const SideBar = () => {
         </div>
         <button
           onClick={() => router.push("/maps")}
-          className="mt-4 w-32 h-32 pl-10 rounded-full"
+          className="mt-4 pl-8 rounded-full"
         >
           <span className="material-icons">location_on</span>
         </button>
