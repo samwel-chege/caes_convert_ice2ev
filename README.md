@@ -1,3 +1,7 @@
+#CAES CONVERT
+##Description
+This is a web prototype that will be used to show the dynamic data - the battery percentage, distance covered and the distance remaining before the battery drains and also a map showcasing the various battery stations
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
