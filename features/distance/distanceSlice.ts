@@ -10,7 +10,7 @@ export interface distanceInterface {
 
 
 const initialState: distanceInterface = {
-    distance: 200,
+    distance: 100,
     charge: 100,
     total_distance: 0,
     showEnergy: false,
