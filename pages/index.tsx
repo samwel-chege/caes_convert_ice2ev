@@ -4,14 +4,15 @@ import BatteryPercentage from "./components/BatteryPercentage";
 import DistanceAvailable from "./components/DistanceAvailable";
 import DistanceCovered from "./components/DistanceCovered";
 import SideBar from "./components/SideBar";
-import EnergyDetails from "./components/EnergyDetails";
+import EnergyDetails from "./energydetails";
+import Button from "./components/Button";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { decrement } from "../features/distance/distanceSlice";
 
 export default function Home() {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const showEnergy = useAppSelector((state) => state.distance.showEnergy);
-  const charge = useAppSelector(state => state.distance.charge)
+  const charge = useAppSelector((state) => state.distance.charge);
 
   // useEffect(() => {
   //   setInterval(() => {
@@ -22,15 +23,12 @@ export default function Home() {
     <>
       <div className="flex gap-2">
         <SideBar />
-        {showEnergy ? (
-          <EnergyDetails />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <BatteryPercentage />
-            <DistanceAvailable />
-            <DistanceCovered />
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <BatteryPercentage />
+          <DistanceAvailable />
+          <DistanceCovered />
+          <Button color="green" />
+        </div>
       </div>
     </>
   );

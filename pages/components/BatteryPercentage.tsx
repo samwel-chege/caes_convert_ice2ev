@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { setEnergy } from "../../features/distance/distanceSlice";
+import { useRouter } from "next/router";
 
 const BatteryPercentage = () => {
+  const router = useRouter()
   const dispatch = useAppDispatch();
   const charge = useAppSelector((state) => state.distance.charge);
   const showEnergy = useAppSelector((state) => state.distance.showEnergy);
 
   const handleClick = () => {
     dispatch(setEnergy());
+    router.push("/energydetails")
     console.log(showEnergy);
   };
+
+
 
   const below80 = (
     <>
@@ -26,12 +31,6 @@ const BatteryPercentage = () => {
     </>
   );
 
-  const below20 = (
-    <>
-      <div className="ml-4 w-1/4 rounded-lg h-4 bg-red-700"></div>
-      <span className="material-icons">sentiment_very_dissatisfied</span>
-    </>
-  );
 
   const good = (
     <>
@@ -40,18 +39,6 @@ const BatteryPercentage = () => {
     </>
   );
 
-
-  const checkPercentage = () => {
-    if (charge < 80 && charge > 50) {
-      below80
-    } else if (charge < 50 && charge > 20) {
-      below50
-    } else if (charge < 20 && charge > 0) {
-      below20
-    } else {
-      good
-    }
-  }
 
   return (
     <>
@@ -66,8 +53,7 @@ const BatteryPercentage = () => {
           </div>
         </div>
         <div className="flex gap-4">
-          {() => checkPercentage()}
-         
+         {charge < 60 ? below50 : good}
         </div>
         <button
           onClick={handleClick}
