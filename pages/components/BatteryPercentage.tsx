@@ -53,7 +53,7 @@ const BatteryPercentage = () => {
           </div>
         </div>
         <div className="flex gap-4">
-         {charge < 60 ? below50 : good}
+         {charge < 80 ? below50 : good}
         </div>
         <button
           onClick={handleClick}

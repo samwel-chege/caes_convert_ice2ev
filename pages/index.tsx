@@ -29,7 +29,7 @@ export default function Home() {
           <DistanceAvailable />
           <DistanceCovered />
           <Button />
-          <EndButton />
+          {/* <EndButton /> */}
           <ResetButton />
         </div>
       </div>

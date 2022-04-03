@@ -25,9 +25,9 @@ export const distanceSlice = createSlice({
     reducers: {
         decrement: (state) => {
             if(state.charge > 0 && state.distance > 0 && state.total_distance <= 200){
-            state.charge -= 2
-            state.distance -= 4
-            state.total_distance += 4
+            state.charge -= 10
+            state.distance -= 10
+            state.total_distance += 10
             }
             
         },
