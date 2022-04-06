@@ -2,11 +2,14 @@
   "name": "caes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://samwel-chege.github.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.29",
@@ -21,6 +24,7 @@
     "autoprefixer": "^10.4.4",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
+    "gh-pages": "^3.2.3",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
   }
