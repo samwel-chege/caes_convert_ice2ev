@@ -4,12 +4,13 @@
   "private": true,
   "homepage": "https://samwel-chege.github.io",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "next lint"
+   
   },
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.29",
